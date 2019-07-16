@@ -3,7 +3,7 @@ from  login_page import LoginPage
 from selenium import webdriver
 from configuration import *
 
-@pytest.fixture(scope='module')
+@pytest.fixture(autouse=True)
 def login_page():
 	driver = webdriver.Chrome()
 	driver.maximize_window()
