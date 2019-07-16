@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By 
 from selenium.webdriver.support import expected_conditions, wait
-
+from configuration import URL_COLLECTIONS_PAGE, URL_PAGE_UNDER_TEST
 
 class LoginPage:
 	
@@ -28,11 +28,12 @@ class LoginPage:
 		return self
 		
 	def assert_login_fail(self):
-		pass
+		error_message = self.driver.find_element(By.XPATH, '//*[@id="notifications-error"]//li')
+		assert error_message.text == 'Invalid Email or password.'
 		
 	def assert_email_validation_error(self):
-		pass
+		self.driver.current_url != URL_PAGE_UNDER_TEST
 		
 	def assert_login_success(self):
-		pass
+		self.driver.current_url == URL_COLLECTIONS_PAGE
 		
