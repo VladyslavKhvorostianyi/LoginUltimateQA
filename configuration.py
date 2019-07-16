@@ -1,5 +1,3 @@
-from os import path
-
 URL_PAGE_UNDER_TEST = 'https://courses.ultimateqa.com/users/sign_in'
 
 EMAIL = 'khvorostaniy@gmail.com'
