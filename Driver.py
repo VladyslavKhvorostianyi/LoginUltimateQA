@@ -1,7 +1,7 @@
 from selenium import webdriver
-from os import path
+from configuration import PATH_TO_DRIVER
 
 class Driver:
 
 	def __init__(self):
-		self.driver = webdriver.Chrome(executable_path=path.join(path.abspath(__file__),'resources','chromedriver'))
+		self.driver = webdriver.Chrome(executable_path=PATH_TO_DRIVER)
