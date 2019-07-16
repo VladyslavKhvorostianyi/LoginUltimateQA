@@ -1,7 +1,15 @@
 import pytest
-import login_page
-import driver
+from  login_page import LoginPage
+from selenium import webdriver
 
 
-def test_try():
-	login_page.LoginPage(driver.Driver()).refresh()
+@pytest.fixture(scope='module')
+def driver():
+	driver = webdriver.Chrome()
+	driver.maximize_window()
+	yield driver
+	driver.close()
+
+
+def test_fail_login(driver):
+	LoginPage(driver).refresh()

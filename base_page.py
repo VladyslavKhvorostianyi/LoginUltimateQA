@@ -7,5 +7,5 @@ class BasePage:
 		self.driver = driver
 	
 	def refresh(self):
-		driver.get(self.url)
+		self.driver.get(self.url)
 		return self

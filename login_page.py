@@ -1,5 +1,6 @@
 from base_page import BasePage
-from configuration import URL_PAGE_UNDER_TEST
+
+URL_PAGE_UNDER_TEST = 'https://courses.ultimateqa.com/users/sign_in'
 
 class LoginPage(BasePage):
 	
