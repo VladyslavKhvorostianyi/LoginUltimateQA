@@ -1,3 +1,4 @@
+# Configuration file with resources and static information
 URL_PAGE_UNDER_TEST = 'https://courses.ultimateqa.com/users/sign_in'
 
 EMAIL = 'khvorostaniy@gmail.com'
